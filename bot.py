@@ -1,7 +1,6 @@
-import discord
-from discord.ext import commands
 import requests
-import nextcord # Import the nextcord library for slash commands
+import nextcord
+from nextcord.ext import commands
 
 bot = commands.Bot()
 
