@@ -4,6 +4,12 @@ from nextcord.ext import commands
 
 bot = commands.Bot()
 
+@bot.event
+async def on_ready():
+    activity = nextcord.Activity(type=nextcord.ActivityType.watching, name="/rank")
+    await bot.change_presence(activity=activity)
+    print("Bot is ready!")
+
 @bot.slash_command(description="Queries the rank of a player on Minehut")
 async def rank(interaction: nextcord.Interaction, playername: str):
     mojang_url = f"https://api.mojang.com/users/profiles/minecraft/{playername}"
