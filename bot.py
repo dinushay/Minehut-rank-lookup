@@ -50,5 +50,4 @@ async def rank_private(interaction: nextcord.Interaction, playername: str):
     else:
         await interaction.response.send_message(f"This player `{playername}` does not exist.", ephemeral=True)
 
-
 bot.run("DISCORDTOKEN")
