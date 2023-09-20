@@ -23,7 +23,7 @@ async def rank(interaction: nextcord.Interaction, playername: str):
             else:
                 await interaction.response.send_message(f"The rank of `{mcname}` is `{rank}`.", ephemeral=False)
         else:
-            await interaction.response.send_message(f"`{ncname}` has never joined Minehut.", ephemeral=False)
+            await interaction.response.send_message(f"`{mcname}` has never joined Minehut.", ephemeral=False)
     else:
         await interaction.response.send_message(f"This player `{playername}` does not exist.", ephemeral=False)
 
