@@ -25,7 +25,7 @@ async def rank(interaction: nextcord.Interaction, playername: str):
         else:
             await interaction.response.send_message(f"`{mcname}` has never joined Minehut.", ephemeral=False)
     else:
-        await interaction.response.send_message(f"This player `{playername}` does not exist.", ephemeral=False)
+        await interaction.response.send_message(f"This player `{playername}` does not exist.", ephemeral=True)
 
 @bot.slash_command(description="Queries the rank of a player on Minehut privately")
 async def rank_private(interaction: nextcord.Interaction, playername: str):
